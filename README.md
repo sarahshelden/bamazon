@@ -1,0 +1,2 @@
+# bamazon
+node and mysql 
