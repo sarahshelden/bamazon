@@ -22,12 +22,18 @@ connection.connect(function(err) {
 
 
 function printStuff (res) {
+    const arr = [];
     const table = new Table({
         head: ['Item Id', 'Product Name', 'Department', 'cost', 'stock'],
         colWidths: [10, 45,40, 8,8]
     });
-    for (const i =0; i < res.length; i++) {
-        table.push([res[i].itemID,res[i].product_name, res[i].department_name, res[i].item_cost, res[i].stock_quanity]);
+
+    for (let i =0; i < res.length; i++) {
+        table.push(res[i].item_id);
+        // table.push(res[i].product_name);
+        // table.push(res[i].department_name);
+        // table.push(res[i].price);
+        // table.push(res[i].stock_quanity);
     }
      console.log(table.toString());
 }
